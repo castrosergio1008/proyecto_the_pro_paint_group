@@ -1,0 +1,29 @@
+#navbar #dropdown-header .row:nth-child(1) {
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+#navbar #dropdown-header .row:nth-child(2) {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+#navbar {
+    background-color: white;
+}
+
+#dropdown-basic-button{
+    background-color: #082A37;
+    border: 1px solid;
+}
+
+#dropdown-basic-button:hover{
+    background-color: #7ED957;
+}
+
+#dropdown-basic-button:active{
+    background-color: #7ED957;
+}

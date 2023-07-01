@@ -1,0 +1,40 @@
+#login-container {
+    margin-top: 10%;
+}
+
+#login-container h2,
+#login-container button,
+#login-container form
+{
+    width: 100%;
+}
+
+#login-container button
+{
+    margin-top: 15px;
+}
+
+#login-container .Form-Label
+{
+    float: left;
+}
+
+#login-button {
+    background-color: #082A37;
+    border: #082A37;
+}
+
+#login-button:hover {
+    background-color: #7ED957;
+}
+
+#login-button:active {
+    background-color: #7ED957;
+}
+
+#col-login {
+  border: 0.1px solid #082A37;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 2px 2px 5px #082A37;
+}
