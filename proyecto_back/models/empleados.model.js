@@ -7,7 +7,8 @@ const EmpleadosSchema = new Schema({
     apellido_m:{type: String, required: true, max:40},
     telefono: {type: String, required: true, max:15},
     mail: {type: String, required: false, max:70},
-    direccion: {type: String, required: false, max:150}
+    direccion: {type: String, required: false, max:150},
+    pass: {type: String, required: false, max:150}
 });
 
 module.exports = mongoose.model("empleados", EmpleadosSchema);

@@ -55,7 +55,7 @@ exports.update = function(req, res){
         direccion: req.body.direccion
     }
 //actualiza un contacto usando el id_
-    Clientes.findByIdAndUpdate(req.params.id, {$set: cliente})
+    Cliente.findByIdAndUpdate(req.params.id, {$set: cliente})
         .then(
         response.exito = true,
         response.msg= "El cliente se actualizó correctamente",

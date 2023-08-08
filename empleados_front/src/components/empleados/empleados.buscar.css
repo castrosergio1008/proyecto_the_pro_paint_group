@@ -1,0 +1,71 @@
+.react-bs-table-sizePerPage-dropdown .dropdown-toggle{
+    float: left;
+    margin-bottom: 20px;
+}
+
+#row-formulario{
+    width: 500px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+
+
+#row-manageUsers{
+    display: flex;
+    margin-top: 0px;
+    justify-content: center;
+}
+
+
+#icono-user{
+    height: 50px;
+    width: 50px;
+    color: #082A37;
+}
+
+
+#title-manageUsers{
+    color: #082A37;
+}
+
+#search-panel{
+    margin-top: 20px;
+}
+
+#row-manageUsers-inicio{
+    justify-content: center;
+    margin-top: 75px;
+}
+
+.btn{
+    background-color: #082A37;
+    border: 1px solid;
+}
+
+.btn:hover{
+    background-color: #7ED957;
+    border-color: #7ED957 ;
+}
+
+.pagination.react-bootstrap-table-page-btns-ul li a {
+    background-color: #082A37;
+    border-color: #082A37;
+  }
+
+  .nav-item{
+    color: #082A37;
+  }
+
+  .nav-link:hover{
+    color:#7ED957;
+  }
+
+  .nav-link:active{
+    color: #7ED957;
+  }
+
+  .nav-link{
+    color:#082A37;
+  }

@@ -53,7 +53,7 @@ exports.update = function(req, res){
         cubrimiento: req.body.cubrimiento
     }
 //actualiza un material usando el id_
-    Clientes.findByIdAndUpdate(req.params.id, {$set: cliente})
+    Material.findByIdAndUpdate(req.params.id, {$set: material})
         .then(
         response.exito = true,
         response.msg= "El material se actualizó correctamente",

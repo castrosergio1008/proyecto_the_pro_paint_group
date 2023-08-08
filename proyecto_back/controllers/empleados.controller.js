@@ -16,7 +16,8 @@ exports.create = function(req,res){
         apellido_m: req.body.apellido_m,
         telefono: req.body.telefono,
         mail: req.body.mail,
-        direccion: req.body.direccion
+        direccion: req.body.direccion,
+        pass: req.body.pass
     })
 
     //guarda el empleado nuevo
@@ -52,7 +53,8 @@ exports.update = function(req, res){
         apellido_m: req.body.apellido_m,
         telefono: req.body.telefono,
         mail: req.body.mail,
-        direccion: req.body.direccion
+        direccion: req.body.direccion,
+        pass: req.body.pass
     }
 //actualiza un contacto usando el id_
     Empleado.findByIdAndUpdate(req.params.id, {$set: empleado})
@@ -70,7 +72,7 @@ exports.remove = function(req, res){
     Empleado.findByIdAndRemove(req.params.id)
         .then(
         response.exito = true,
-        response.msg= "El empleado se eliminó correctamente",
+        response.msg= "El usuario se eliminó correctamente",
         res.json(response))
         .catch(
             error => {

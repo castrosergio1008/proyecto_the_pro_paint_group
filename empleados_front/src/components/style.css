@@ -1,0 +1,40 @@
+.sidebar-lateral{
+    flex:1 1 auto;
+    }
+    
+.div-one{
+    flex: 1 1 auto;
+    }
+
+.container-one{
+    display: flex;
+    padding: 0;
+    justify-content:center
+}
+
+#row-crear-usuario{
+    width: 1000px;
+    margin-top: 20px;
+    padding: 20px;
+    justify-content:left;
+
+}
+
+#boton-crear-usuario{
+    background-color: #082A37;
+    border-color:  #082A37;
+}
+
+#boton-crear-usuario:active{
+    background-color: #7ED957;
+    border-color: #7ED957;
+}
+
+#boton-crear-usuario:hover{
+    background-color: #7ED957;
+    border-color: #7ED957;
+}
+
+.form-label{
+    float:left;
+}

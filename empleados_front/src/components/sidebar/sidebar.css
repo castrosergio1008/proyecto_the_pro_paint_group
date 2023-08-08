@@ -1,0 +1,32 @@
+.nav{
+    text-align: left;
+    flex: 0.35 1 auto;
+}
+
+.flex-column{
+    background: #7ED957;
+    margin-top: 75px;
+    width: 150px;
+}
+
+#title-administrator{
+    text-align: center;
+    color: #082A37;
+}
+
+#div-admin{
+    padding: 5px;
+    border-bottom: solid white 1px;
+}
+
+.iconSidebar{
+   color:  #082A37;
+}
+
+.link-sidebar{
+    color: #082A37;
+}
+
+.link-sidebar:hover{
+    color:white;
+}

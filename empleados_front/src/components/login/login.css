@@ -1,7 +1,10 @@
 #login-container {
-    margin-top: 10%;
+    margin-top: 100px;
 }
 
+#col-ct{
+    justify-content: center;
+}
 #login-container h2,
 #login-container button,
 #login-container form
@@ -37,4 +40,9 @@
   border-radius: 10px;
   padding: 20px;
   box-shadow: 2px 2px 5px #082A37;
+  margin: auto;
+}
+
+#col-sign{
+    margin: auto;
 }

@@ -6,20 +6,27 @@ import './login.css';
 import {isNull} from 'util';
 import Cookies from "universal-cookie";
 import {calcularExpiracionSesion} from '../helper/helper';
+import Loading from '../loading/loading';
 
 const {APIHOST} = app;
 const cookies = new Cookies();
 
+export function cerrarSesion(){
+    cookies.remove('_s', { path: '/' });
+    // Redireccionar a la página de inicio de sesión
+    window.location.href = "/login";
+}
 export default class login extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            Loading: false,
             usuario: '',
             pass: '',
         };
     }
     iniciarSesion() {
-        alert("iniciando sesión");
+        this.setState({loading: true});
         axios.post(`${APIHOST}/usuarios/login/`, {
             usuario: this.state.usuario,
             pass: this.state.pass,
@@ -32,24 +39,30 @@ export default class login extends React.Component {
                     path: "/",
                     expires: calcularExpiracionSesion(),
                 });
+                this.props.history.push(window.open("/administrador"));
             }
+            this.setState({loading: false});
         })
         .catch((error) => {
             console.log(error);
+            this.setState({loading: false});
     });
 }
+
     render() {
         return (
             <Container id="login-container">
+                <Loading show = {this.state.loading}/>
                 <Row>
-                    <Col>
+                    <Col id = "col-ct">
                         <Row>
                             <Col
                                 sm="12"
                                 sx="12"
                                 md={{ span: 3, offset: 4 }}
                                 lg={{ span: 3, offset: 4 }}
-                                xl={{ span: 3, offset: 4 }}>
+                                xl={{ span: 3, offset: 4 }}
+                                id="col-sign">
                                 <h2>Sign in</h2>
                             </Col>
                         </Row>
@@ -66,9 +79,6 @@ export default class login extends React.Component {
                                         <Form.Control
                                             onChange={(e) =>
                                                 this.setState({ usuario: e.target.value })} />
-                                                 {
-                                            this.state.usuario
-                                        }
                                     </Form.Group>
 
                                     <Form.Group>
@@ -76,9 +86,6 @@ export default class login extends React.Component {
                                         <Form.Control type="password"
                                             onChange={(e) =>
                                                 this.setState({ pass: e.target.value })} />
-                                                {
-                                            this.state.pass
-                                        }
                                     </Form.Group>
                                     <Button id="login-button"
                                         type="submit"
