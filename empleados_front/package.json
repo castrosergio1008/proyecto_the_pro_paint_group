@@ -23,7 +23,6 @@
     "util": "^0.12.5",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://areasvolumenessergio.000webhostapp.com/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
