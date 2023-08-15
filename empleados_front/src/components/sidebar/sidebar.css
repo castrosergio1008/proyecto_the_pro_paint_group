@@ -6,7 +6,7 @@
 .flex-column{
     background: #7ED957;
     margin-top: 75px;
-    width: 150px;
+    width: 170px;
 }
 
 #title-administrator{
@@ -30,3 +30,18 @@
 .link-sidebar:hover{
     color:white;
 }
+
+.link-sidebar {
+    display: flex;
+    align-items: center;
+  }
+
+  @media (max-width: 768px) {
+    .flex-column {
+      flex-direction: column;
+    }
+
+    .link-sidebar {
+        margin-top: 10px; /* Agrega un margen entre los enlaces */
+      }
+    }
