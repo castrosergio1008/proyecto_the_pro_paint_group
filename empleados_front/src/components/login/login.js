@@ -84,7 +84,7 @@ export default class login extends React.Component {
 
                                     <Form.Group>
                                         <Form.Label className="Form-Label">Password</Form.Label>
-                                        <Form.Control type="password"
+                                        <Form.Control type="password" name="password" autocomplete="current-password"
                                             onChange={(e) =>
                                                 this.setState({ pass: e.target.value })} />
                                     </Form.Group>
