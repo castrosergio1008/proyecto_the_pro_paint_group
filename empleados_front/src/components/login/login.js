@@ -25,9 +25,9 @@ export default class login extends React.Component {
             pass: '',
         };
     }
-    iniciarSesion() {
+    async iniciarSesion() {
         this.setState({loading: true});
-        axios.post(`${APIHOST}/usuarios/login/`, {
+        await axios.post(`${APIHOST}/usuarios/login/`, {
             usuario: this.state.usuario,
             pass: this.state.pass,
         })
@@ -39,7 +39,9 @@ export default class login extends React.Component {
                     path: "/",
                     expires: calcularExpiracionSesion(),
                 });
-                this.props.history.push(window.open("/administrador"));
+                //this.props.history.push(window.open("/administrador"));
+                this.props.history.push(window.location.href = "/administrador");
+                //window.location.href = "/login";
                 
             }
             this.setState({loading: false});
