@@ -77,14 +77,14 @@ export default class login extends React.Component {
                                 <Form>
                                     <Form.Group>
                                         <Form.Label className="Form-Label">Email address</Form.Label>
-                                        <Form.Control name="username" autocomplete="username"
+                                        <Form.Control name="username" autoComplete="username"
                                             onChange={(e) =>
                                                 this.setState({ usuario: e.target.value })} />
                                     </Form.Group>
 
                                     <Form.Group>
                                         <Form.Label className="Form-Label">Password</Form.Label>
-                                        <Form.Control type="password" name="password" autocomplete="current-password"
+                                        <Form.Control type="password" name="password" autoComplete="current-password"
                                             onChange={(e) =>
                                                 this.setState({ pass: e.target.value })} />
                                     </Form.Group>
