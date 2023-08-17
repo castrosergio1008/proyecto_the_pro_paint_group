@@ -77,7 +77,7 @@ export default class login extends React.Component {
                                 <Form>
                                     <Form.Group>
                                         <Form.Label className="Form-Label">Email address</Form.Label>
-                                        <Form.Control
+                                        <Form.Control name="username" autocomplete="username"
                                             onChange={(e) =>
                                                 this.setState({ usuario: e.target.value })} />
                                     </Form.Group>
