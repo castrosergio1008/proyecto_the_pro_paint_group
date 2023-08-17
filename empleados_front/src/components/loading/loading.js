@@ -8,10 +8,13 @@ export default class loading extends React.Component {
             loading: false,
         }
     }
-    componentWillReceiveProps(nextProps) {
-        if(nextProps.show !== this.state.show)
-        this.setState({show: nextProps.show});
+    
+    componentDidUpdate(prevProps) {
+        if (prevProps.show !== this.props.show) {
+            this.setState({ show: this.props.show });
+        }
     }
+
     render() { 
         return ( 
             <>

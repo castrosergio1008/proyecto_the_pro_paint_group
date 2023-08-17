@@ -40,6 +40,7 @@ export default class login extends React.Component {
                     expires: calcularExpiracionSesion(),
                 });
                 this.props.history.push(window.open("/administrador"));
+                
             }
             this.setState({loading: false});
         })
