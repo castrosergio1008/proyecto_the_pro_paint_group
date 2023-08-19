@@ -11,8 +11,8 @@ export function calcularExpiracionSesion(){
     return new Date(newDate);
 }
 
-export async function getSession(){
-    return await isUndefined(cookies.get('_s')) ? false: cookies.get('_s');
+export function getSession(){
+    return isUndefined(cookies.get('_s')) ? false: cookies.get('_s');
 }
 
 function renovarSesion() {
@@ -27,9 +27,9 @@ function renovarSesion() {
 }
 
 export const request = {
-    get: async function (services) {
+    get: function (services) {
         let token = renovarSesion();
-        return await axios.get(`${APIHOST}${services}`, {
+        return axios.get(`${APIHOST}${services}`, {
             headers: {
                 Authorization: `Bearer ${token}`,
             },
@@ -37,18 +37,18 @@ export const request = {
         );
     },
 
-    post: async function(services,data){
+    post: function(services,data){
         let token = renovarSesion();
-        return await axios.post(`${APIHOST}${services}`, data, {
+        return axios.post(`${APIHOST}${services}`, data, {
             headers: {
                 Authorization: `Bearer ${token}`,
             },
         })
     },
 
-    put: async function(services, data){
+    put: function(services, data){
         let token = renovarSesion();
-        return await axios.put(`${APIHOST}${services}`, data, {
+        return axios.put(`${APIHOST}${services}`, data, {
             headers: {
                 Authorization: `Bearer ${token}`,
             },
