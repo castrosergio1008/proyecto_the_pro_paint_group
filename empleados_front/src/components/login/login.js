@@ -42,6 +42,7 @@ export default class login extends React.Component {
                 });
                 //this.props.history.push(window.open("/administrador"));
                 this.props.history.push(window.location.href = "/administrador");
+                console.log(response.data.token);
                 //window.location.href = "/login";
                 
             }
@@ -92,7 +93,7 @@ export default class login extends React.Component {
                                                 this.setState({ pass: e.target.value })} />
                                     </Form.Group>
                                     <Button id="login-button"
-                                        type="submit"
+                                        type="button"
                                         onClick={() => {
                                             this.iniciarSesion();
                                         }}>
