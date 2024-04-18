@@ -1,3 +1,4 @@
 {
-    "APIHOST": "https://backtppg.nn.r.appspot.com"
+    "APIHOST": "http://localhost:3001"
 }
+

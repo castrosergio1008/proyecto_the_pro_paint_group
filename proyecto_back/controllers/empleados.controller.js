@@ -1,4 +1,6 @@
 const Empleado = require("../models/empleados.model");
+const crypto = require("crypto");
+const jwt = require("jsonwebtoken");
 const now = new Date();
 
 //formato de la respuesta
@@ -7,17 +9,46 @@ let response = {
     exito: false,
     hora : now
 }
+//funcion para logear un empleado
+// exports.login = function(req, res, next) {
+//     let hashedpass = crypto.createHash("sha512").update(req.body.pass).digest("hex");
+//     Empleado.findOne({
+//         nombre: req.body.nombre,
+//         apellido_p: req.body.apellido_p,
+//         apellido_m: req.body.apellido_m,
+//         telefono: req.body.telefono,
+//         mail: req.body.mail,
+//         direccion: req.body.telefono, 
+//         pass: hashedpass
+//         }).then(empleado => {
+//         let response = {
+//             token: null
+//         };
 
+
+//         if(empleado !== null) {
+//             let payload = {
+//                 id: empleado._id,
+//                 usuario: usuario.mail
+//             }
+//             response.token = jwt.sign(payload, '__recret__',
+//             {expiresIn: '12h'})
+//         }
+//         res.json(response);
+//     })
+// }
 //funcion para crear un empleado nuevo
 exports.create = function(req,res){
+    let hashedpass = crypto.createHash("sha512").update(req.body.pass).digest("hex");
     let empleado = new Empleado({
         nombre: req.body.nombre,
         apellido_p: req.body.apellido_p,
         apellido_m: req.body.apellido_m,
         telefono: req.body.telefono,
         mail: req.body.mail,
-        direccion: req.body.direccion,
-        pass: req.body.pass
+        direccion: req.body.direccion
+        //pass: req.body.pass
+        //pass: hashedpass
     })
 
     //guarda el empleado nuevo
